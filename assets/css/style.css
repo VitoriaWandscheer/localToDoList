@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+    background: none;
+    font-family: 'Acme', sans-serif;
+}
+:root {
+    --color-first: rgba(126, 25, 70, 1);
+    --color-first-30: rgba(126, 25, 70, 0.30);
+    --color-first-60: rgba(126, 25, 70, 0.60);
+    --color-first-90: rgba(126, 25, 70, 0.90);
+    --color-second: #235789;
+    --color-light: #FBFEF9;
+    --color-dark: #000004;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--color-first), var(--color-second));
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    height: fit-content;
+    margin: 50px auto 20px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    padding: 20px 20px 40px 20px;
+}
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: var(--color-first);
+    margin-bottom: 19.77px;
+}
+.label {
+    color: var(--color-first);
+    padding-left: 13px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-first-30);
+    border-radius: 20px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+input {
+    flex: 1;
+    padding: 10px;
+}
+button {
+    background: var(--color-first);
+    padding: 10px 32px;
+    border-radius: 40px;
+    font-size: 20px;
+    color: var(--color-light);
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--color-first-90);
+}
+ul li {
+    padding: 12px 19px 12px 50px;
+    font-size: 20px;
+    color: var(--color-dark);
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url(../img/unchecked.svg);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: var(--color-first-60);
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url(../img/checked.svg);
+}
