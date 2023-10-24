@@ -13,18 +13,15 @@
     <div class="container">
         <div class="todo-app">
             <h2>Lista de Tarefas</h2>
-            <label class="label" for=”input-box”>Nova Tarefa:</label>
+            <label for=”input-box”>Nova Tarefa:</label>
             <div class="row">
                 <input type="text" id="input-box" placeholder="Adicione uma tarefa">
-                <button class="add">Criar Tarefa</button>
+                <button onclick="addTask()">Criar Tarefa</button>
             </div>
-            <ul class="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
+            <ul id="list-container">
             </ul>
         </div>
     </div>
-    
+    <script src="assets/script/script.js"></script>
 </body>
 </html>
